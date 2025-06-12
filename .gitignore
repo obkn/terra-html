@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Sass cache
+.sass-cache/
+*.css.map
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+
+# Local scripts
+git-autosave.sh

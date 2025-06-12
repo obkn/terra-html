@@ -1,0 +1,169 @@
+:root {
+  --hero-red-width: clamp(240px, 48vw, 480px);
+  --hero-content-width: 50vw;
+  --color-red: #C8161E;
+  --color-red-opacity90: rgba(200, 22, 30, 0.9);
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-text-main: #222;
+}
+
+body {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  color: var(--color-text-main);
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  max-height: 720px;
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-slider .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.hero-slider .hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+.hero-slider .hero-bg.active {
+  opacity: 1;
+}
+
+.hero-red-bg {
+  position: absolute;
+  top: 0;
+  right: 0.5px;
+  width: var(--hero-red-width);
+  height: 100%;
+  background-color: var(--color-red-opacity90);
+  z-index: 2;
+}
+
+.hero-red-decoration-wrap {
+  position: absolute;
+  top: 0;
+  right: var(--hero-red-width);
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+.hero-red-decoration-wrap .hero-red-decoration {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  right: 0;
+  z-index: 4;
+  width: var(--hero-content-width);
+  height: auto;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: left;
+}
+.hero-content .hero-title {
+  font-size: calc(var(--hero-content-width) / 7);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+}
+.hero-content .hero-sub {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  background-color: var(--color-red);
+  color: #fff;
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  transform: skew(-16deg);
+  letter-spacing: 0.2em;
+}
+.hero-content .hero-lead {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+.hero-content .hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.hero-content .hero-buttons .btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+.hero-content .hero-buttons .btn.info {
+  background-color: #8dc63f;
+}
+.hero-content .hero-buttons .btn.recruit {
+  background-color: #fff;
+  color: var(--color-red);
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    position: relative;
+    right: auto;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+  .hero-content .hero-title {
+    font-size: 2rem;
+    font-style: italic;
+    white-space: normal;
+  }
+  .hero-content .hero-sub {
+    font-size: 1.2rem;
+  }
+  .hero-content .hero-lead {
+    font-size: 0.9rem;
+  }
+  .hero-content .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-red-bg,
+  .hero-red-decoration-wrap {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+  .hero-red-decoration-wrap .hero-red-decoration {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
