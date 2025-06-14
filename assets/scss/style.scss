@@ -1,6 +1,6 @@
 :root {
-  --hero-red-width: clamp(240px, 48vw, 480px);
-  --hero-content-width: 50vw;
+  --hero-red-width: 32vw;
+  --hero-content-width: clamp(520px, 52vw, 640px);
 
   --color-red: #C8161E;
   --color-red-opacity90: rgba(200, 22, 30, 0.9);
@@ -15,14 +15,14 @@ body {
   color: var(--color-text-main);
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: #f5f5f5;
 }
 
 /* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
-  max-height: 720px;
+  max-height: 800px;
   overflow: hidden;
 }
 
@@ -86,8 +86,8 @@ body {
   right: 0;
   z-index: 4;
   width: var(--hero-content-width);
-  height: auto;
-  padding: 5rem 2rem;
+  height: 100%;
+  padding-right: 8vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,28 +95,35 @@ body {
   text-align: left;
 
   .hero-title {
-    font-size: calc(var(--hero-content-width) / 7);
+    margin: 0;
+    font-size: calc(var(--hero-content-width) / 6);
     font-style: italic;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.05;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     white-space: nowrap;
   }
 
   .hero-sub {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    background-color: var(--color-red);
-    color: #fff;
+    margin: 2rem 0;
+    font-size: calc(var(--hero-content-width) / 18);
+    font-weight: 700;
+    background-color: #fff;
+    color: var(--color-red);
     display: inline-block;
-    padding: 0.25em 0.75em;
+    padding: 0.25em;
     transform: skew(-16deg);
     letter-spacing: 0.2em;
+    text-align: center;
+    line-height: 1.1;
   }
 
   .hero-lead {
-    margin-top: 0.5rem;
-    font-size: 1rem;
+    p {
+      margin: 0.5rem 0 0;
+      font-size: 1.375rem;
+      text-align: right;
+    }
   }
 
   .hero-buttons {

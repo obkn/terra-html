@@ -30,26 +30,23 @@ body {
   inset: 0;
   z-index: 0;
 }
-
 .hero-slider .hero-overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
-
 .hero-slider .hero-bg {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   position: absolute;
   inset: 0;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   z-index: 0;
 }
-
 .hero-slider .hero-bg.active {
   opacity: 1;
 }
@@ -74,11 +71,10 @@ body {
   justify-content: flex-end;
   align-items: stretch;
 }
-
 .hero-red-decoration-wrap .hero-red-decoration {
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 
@@ -95,7 +91,6 @@ body {
   color: #fff;
   text-align: left;
 }
-
 .hero-content .hero-title {
   margin: 0;
   font-size: calc(var(--hero-content-width) / 6);
@@ -105,7 +100,6 @@ body {
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   white-space: nowrap;
 }
-
 .hero-content .hero-sub {
   margin: 2rem 0;
   font-size: calc(var(--hero-content-width) / 18);
@@ -119,19 +113,16 @@ body {
   text-align: center;
   line-height: 1.1;
 }
-
 .hero-content .hero-lead p {
   margin: 0.5rem 0 0;
   font-size: 1.375rem;
   text-align: right;
 }
-
 .hero-content .hero-buttons {
   margin-top: 2rem;
   display: flex;
   gap: 1rem;
 }
-
 .hero-content .hero-buttons .btn {
   padding: 0.8rem 1.5rem;
   border-radius: 4px;
@@ -139,11 +130,9 @@ body {
   color: #fff;
   text-decoration: none;
 }
-
 .hero-content .hero-buttons .btn.info {
   background-color: #8dc63f;
 }
-
 .hero-content .hero-buttons .btn.recruit {
   background-color: #fff;
   color: var(--color-red);
@@ -173,7 +162,7 @@ body {
     align-items: center;
   }
   .hero-red-bg,
-  .hero-red-decoration-wrap {
+.hero-red-decoration-wrap {
     width: 100%;
     height: 100%;
     top: 0;
@@ -183,6 +172,4 @@ body {
     display: none;
   }
 }
-
-
 /*# sourceMappingURL=style.css.map */
