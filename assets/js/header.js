@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // TOP: スクロールで背景変更
   if (hero && window.innerWidth >= 768) {
     window.addEventListener('scroll', () => {
-      header.classList.toggle('is-scrolled', window.scrollY > hero.offsetHeight - 80);
+      const isScrolled = window.scrollY > hero.offsetHeight - 80;
+      header.classList.toggle('is-scrolled', isScrolled);
     });
   }
 });

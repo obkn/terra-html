@@ -26,29 +26,24 @@ body {
   background: transparent;
   transition: background 0.3s;
 }
-
 .site-header.is-scrolled {
   background: #fff;
 }
-
 .site-header .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
 }
-
 .site-header .main-nav {
   display: none;
 }
-
 .site-header .nav-toggle {
   display: block;
   background: none;
   border: none;
   cursor: pointer;
 }
-
 .site-header .nav-toggle span {
   display: block;
   width: 24px;
@@ -56,7 +51,6 @@ body {
   margin-bottom: 4px;
   background: #333;
 }
-
 @media (min-width: 768px) {
   .site-header {
     background: #fff !important;
@@ -89,11 +83,9 @@ body {
   padding: 2rem;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
 }
-
 .site-header.nav-open .main-nav ul.nav-list {
   display: block;
 }
-
 .site-header.nav-open .main-nav ul.nav-list li {
   margin-bottom: 1rem;
 }
@@ -111,18 +103,15 @@ body {
   inset: 0;
   z-index: 0;
 }
-
 .hero-slider .hero-overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
-
 .hero-slider .hero-bg {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
   inset: 0;
@@ -130,7 +119,6 @@ body {
   transition: opacity 1s ease-in-out;
   z-index: 0;
 }
-
 .hero-slider .hero-bg.active {
   opacity: 1;
 }
@@ -155,10 +143,8 @@ body {
   justify-content: flex-end;
   align-items: stretch;
 }
-
 .hero-red-decoration-wrap .hero-red-decoration {
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
   display: block;
 }
@@ -176,7 +162,6 @@ body {
   color: #fff;
   text-align: left;
 }
-
 .hero-content .hero-title {
   margin: 0 0.5rem 0 0;
   font-size: calc(var(--hero-content-width) / 6);
@@ -186,7 +171,6 @@ body {
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   white-space: nowrap;
 }
-
 .hero-content .hero-sub {
   margin: 2rem 0;
   font-size: calc(var(--hero-content-width) / 18);
@@ -201,19 +185,16 @@ body {
   line-height: 1.1;
   text-indent: 0.5rem;
 }
-
 .hero-content .hero-lead p {
   margin: 0.5rem 0 0;
   font-size: 1.375rem;
   text-align: right;
 }
-
 .hero-content .hero-buttons {
   margin-top: 2rem;
   display: flex;
   gap: 1rem;
 }
-
 .hero-content .hero-buttons .btn {
   padding: 0.8rem 1.5rem;
   border-radius: 4px;
@@ -221,11 +202,9 @@ body {
   color: #fff;
   text-decoration: none;
 }
-
 .hero-content .hero-buttons .btn.info {
   background-color: #8dc63f;
 }
-
 .hero-content .hero-buttons .btn.recruit {
   background-color: #fff;
   color: var(--color-red);
@@ -245,7 +224,6 @@ body {
     position: absolute;
     inset: 0;
     background-color: var(--color-red);
-    -webkit-clip-path: polygon(0 70%, 100% 55%, 100% 100%, 0% 100%);
     clip-path: polygon(0 70%, 100% 55%, 100% 100%, 0% 100%);
     z-index: 1;
   }
@@ -258,7 +236,6 @@ body {
     left: 0;
     position: absolute;
     background-color: var(--color-red);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
     z-index: 1;
   }
@@ -297,6 +274,5 @@ body {
     display: none;
   }
 }
-
 
 /*# sourceMappingURL=style.css.map */
