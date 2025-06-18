@@ -1,19 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.main-nav');
   const hero = document.querySelector('.hero');
 
-  // SP: メニュー開閉
+  // 初期設定
+  function updateHeaderState() {
+    const scrollY = window.scrollY;
+    const heroHeight = hero?.offsetHeight || 0;
+    const isTop = scrollY < heroHeight - 80;
+
+    header.classList.toggle('is-top', isTop);
+    header.classList.toggle('is-scrolled', !isTop);
+  }
+
+  // メニュー開閉（SP）
   toggle.addEventListener('click', () => {
     header.classList.toggle('nav-open');
   });
 
-  // TOP: スクロールで背景変更
-  if (hero && window.innerWidth >= 768) {
-    window.addEventListener('scroll', () => {
-      const isScrolled = window.scrollY > hero.offsetHeight - 80;
-      header.classList.toggle('is-scrolled', isScrolled);
-    });
-  }
+  // スクロールイベント（PC・SP共通）
+  window.addEventListener('scroll', updateHeaderState);
+  window.addEventListener('resize', updateHeaderState); // リサイズ時も判定し直す
+  updateHeaderState(); // 初回呼び出し
 });
