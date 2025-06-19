@@ -1,3 +1,6 @@
+/* =============================
+  Variables
+============================= */
 :root {
   --hero-red-width: 32vw;
   --hero-content-width: clamp(520px, 52vw, 640px);
@@ -9,6 +12,9 @@
   --color-text-main: #222;
 }
 
+/* =============================
+  Base Styles
+============================= */
 body {
   font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
   font-size: 16px;
@@ -33,26 +39,6 @@ body {
     img {
       width: 120px;
       height: auto;
-    }
-  }
-
-  &.is-top {
-    background: transparent;
-
-    .logo img {
-      width: 160px;
-    }
-
-    .nav-list li a {
-      color: #fff;
-    }
-  }
-
-  &.is-scrolled {
-    background: #fff;
-
-    .header-inner {
-      align-items: center;
     }
   }
 
@@ -82,13 +68,29 @@ body {
     }
   }
 
-  &.nav-open {
+  &.is-top {
+    background: transparent;
 
-    .main-nav {
-      display: flex;
-      flex-direction: column;
+    .logo img {
+      width: 160px;
+    }
+
+    .nav-list li a {
+      color: #fff;
+    }
+  }
+
+  &.is-scrolled {
+    background: #fff;
+
+    .header-inner {
       align-items: center;
-      justify-content: center;
+    }
+  }
+
+  &.nav-open {
+    .main-nav {
+      display: block;
       position: fixed;
       top: 0;
       left: 0;
@@ -113,18 +115,21 @@ body {
           margin-bottom: 1.5rem;
 
           a {
-            color: #fff;
-            font-family: 'Roboto Condensed', sans-serif;
             font-size: 1.5rem;
-            font-style: italic;
+            color: #fff;
             text-decoration: none;
           }
         }
       }
     }
   }
+}
 
-  @media (min-width: 992px) {
+/* =============================
+  PC Styles
+============================= */
+@media (min-width: 992px) {
+  .site-header {
     background: #fff;
 
     .main-nav {
@@ -232,7 +237,9 @@ body {
   }
 }
 
-/* Hero Section */
+/* =============================
+  Hero Section
+============================= */
 .hero {
   position: relative;
   height: 100vh;
@@ -437,5 +444,11 @@ body {
   .hero-red-bg,
   .hero-red-decoration-wrap {
     display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-header.nav-open .main-nav {
+    display: none !important;
   }
 }

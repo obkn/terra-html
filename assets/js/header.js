@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     header.classList.toggle('is-top', isTop);
     header.classList.toggle('is-scrolled', !isTop);
+
+    // 横幅が992px以上なら nav-open を削除
+    if (window.innerWidth >= 992 && header.classList.contains('nav-open')) {
+      header.classList.remove('nav-open');
+    }
   }
 
   // メニュー開閉（SP）
@@ -18,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     header.classList.toggle('nav-open');
   });
 
-  // スクロールイベント（PC・SP共通）
+  // スクロール・リサイズ時に状態を更新
   window.addEventListener('scroll', updateHeaderState);
-  window.addEventListener('resize', updateHeaderState); // リサイズ時も判定し直す
+  window.addEventListener('resize', updateHeaderState);
   updateHeaderState(); // 初回呼び出し
 });
