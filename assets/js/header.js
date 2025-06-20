@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.nav-toggle');
   const hero = document.querySelector('.hero');
+  const spanTop = toggle.querySelector('.bar-top');
+  const spanMiddle = toggle.querySelector('.bar-middle');
+  const spanBottom = toggle.querySelector('.bar-bottom');
 
   // 初期設定
   function updateHeaderState() {
@@ -15,12 +18,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // 横幅が992px以上なら nav-open を削除
     if (window.innerWidth >= 992 && header.classList.contains('nav-open')) {
       header.classList.remove('nav-open');
+      header.classList.remove('nav-closing');
+      toggle.classList.remove('open');
     }
   }
 
   // メニュー開閉（SP）
   toggle.addEventListener('click', () => {
-    header.classList.toggle('nav-open');
+    if (header.classList.contains('nav-open')) {
+      // 閉じるとき：アニメーション用クラス追加
+      header.classList.add('nav-closing');
+
+      setTimeout(() => {
+        header.classList.remove('nav-open');
+        header.classList.remove('nav-closing');
+      }, 300); // アニメーション時間と合わせる
+      toggle.classList.remove('open');
+    } else {
+      // 開くとき
+      header.classList.add('nav-open');
+      toggle.classList.add('open');
+    }
   });
 
   // スクロール・リサイズ時に状態を更新
