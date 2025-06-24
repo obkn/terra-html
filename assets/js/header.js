@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const header = document.querySelector('.site-header');
+  const header = document.querySelector('.header');
   const toggle = document.querySelector('.nav-toggle');
   const hero = document.querySelector('.hero');
   const spanTop = toggle.querySelector('.bar-top');
